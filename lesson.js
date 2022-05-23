@@ -41,7 +41,7 @@ div1.append(fontForDiv)
 //append
 //prepend
 
-
+/*
 
 const contMain = document.getElementById('div')
 
@@ -52,8 +52,9 @@ borderCont.className = 'border'
 contMain.append(borderCont)
 
 
-/*const fieldSet = document.createElement('fieldset')
-fieldSet.className = 'fieldset'*/
+const fieldSet = document.createElement('fieldset')
+fieldSet.className = 'fieldset'
+borderCont.append(fieldSet)
 
 
 
@@ -64,39 +65,158 @@ inputFirst.className = 'input'
 inputFirst.type ='text'
 inputFirst.value ='userName'
 
-borderCont.append(inputFirst)
+fieldSet.append(inputFirst)
 
-
+const inputSecond = document.createElement('input');
+inputSecond.className = 'input';
+inputSecond.type ='number';
+inputSecond.value ='11223344';
+fieldSet.append(inputSecond);
 const form = document.createElement('form')
-borderCont.append(form)
+fieldSet.append(form)
 form.append(inputFirst)
 form.append(inputSecond) // добавление формы
 
 
 
-const fieldSet = document.createElement('fieldset')
-fieldSet.className = 'fieldset'
-contMain.append(feildset)
+/*const fieldSet = document.createElement('fieldset')
+fieldSet.className = 'fieldset';
+contMain.append(feildset);*/
 
 
 
 
-const inputSecond = document.createElement('input')
-inputSecond.className = 'input'
-inputSecond.type ='number'
-inputSecond.value ='11223344'
-borderCont.append(inputSecond)
 
+/*
 
 function createInput(className, type,value, appendBlock){
     const inputSecond = document.createElement('input')
     inputSecond.className = className
     inputSecond.type =type
     inputSecond.value = value
-    borderCont.append(inputSecond)
+    fieldSet.append(inputSecond)
 
 }
 
 createInput('input',"text","userName", borderCont)
 createInput('input',"text","userName", borderCont)
-createInput('input',"password","userName", borderCont)
+createInput('input',"password","userName", borderCont);
+
+
+const input3 = document.createElement('input')
+fieldSet.append(input3)
+input3.type = 'password'
+form.append(inputSecond)
+
+
+
+
+const label1 = 'smth text text';
+label1.className = 'label1'
+const legendInp = document.createElement('legend');
+fieldSet.prepend(legendInp)
+legendInp.prepend(label1)
+
+
+const divElem = document.createElement('div')
+contMain.append(divElem)
+divElem.className = 'divElem'
+/*divElem.remove()*/
+/*
+const newId = document.getElementById('newId')
+newId.classList.add('class')
+newId.classList.remove('class')
+console.log(newId.classList.contains('class'))
+
+newId.classList.toggle('newId2')*/
+
+
+
+/*function sayHello (){
+    alert('hello')
+}
+*//*
+const elem = document.getElementById('newId')
+function sayHello (){
+const divEl = document.createElement('div')
+divEl.innerText ='a'
+elem.prepend(divEl)
+const divEl2 = document.createElement('div')
+divEl2.innerText ='hello'
+*/
+  
+             /////////другие слова NB
+
+/*
+const btn = document.getElementById('btn')
+
+function hover() {
+
+btn.classList.add('red')
+
+}
+
+
+function notHover(){
+    btn.classList.remove('red')
+}
+
+*/
+/*
+const btn = document.getElementById('btn')
+function sayHi(){
+    console.log('hello')
+}
+btn.addEventListener('mouseover', sayHi)
+
+*/
+
+/*
+const btn = document.getElementById('btn')
+
+
+
+
+const popupFind= document.querySelector('.hidden')
+function sayHi(){
+    popupFind.classList.toggle('visible')
+}
+btn.addEventListener('click',sayHi)
+*/
+/*
+
+const btn = document.querySelectorAll('.btn')
+function func(event){
+    console.log(event.target)
+}
+btn.forEach((i)=>{
+    i.addEventListener('click', func)}
+    )
+
+
+    */
+
+  
+    const ar =[
+        {
+            name:'terminator',
+            description: "action",
+            date:1994,
+            img:'terminator',
+            genre:'action'
+        },
+        {
+            name:'robocop',
+            description: "some text",
+            date:1994,
+            img:'robocop',
+            genre:"action"
+        },
+        {
+            name:'home alone',
+            description: "smth",
+            date:1999,
+            img:'home alone',
+            genre:"comedy"
+        },
+    ]
