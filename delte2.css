@@ -1,0 +1,34 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item{
+    width: 200px;
+    height: 300px;
+    border: 1px solid #000;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+}
+
+.h{
+    width: 100%;
+    height: 20px;
+   
+    margin: 0 auto;
+
+}
+.img{
+    
+    width: 50%;
+ 
+    
+}
+.btn{
+    width: 50%;
+    margin: 0 auto;
+}
