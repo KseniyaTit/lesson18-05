@@ -1,4 +1,3 @@
-
 /*class Animal{
     constructor(name, age, childs= null){
         this.name = name,
@@ -48,7 +47,7 @@ setInterval(()=>{
      }
    but.addEventListener('dblclick', func)
 
-   */
+   */ /*
    const movies =[
     {
         name:'terminator',
@@ -140,4 +139,153 @@ const handleSort =()=>{
 
 
 }
-date.addEventListener('click', handleSort )
+date.addEventListener('click', handleSort)
+
+
+*/
+/*
+fetch("https://api.covidtracking.com/v1/states/current.json")
+.then(res => res.json())
+.then((data)=> console.log(data))
+
+*/
+
+/*
+const render2 = (date, state,positive) => {
+  return `   
+     <div class="item">
+            
+            <div class="name h">name:${date}</div>
+            <div class="genre h">genre:${state}</div>
+            <div class="name h">name:${positive}</div>
+           
+            
+    </div>
+  `;
+};
+
+async function getCovid() {
+  const url = "https://api.covidtracking.com/v1/states/current.json";
+  const res = await fetch(url);
+  const data = await res.json();
+  console.log(data);
+
+
+  console.log(data);
+  const covid = data.map((i) => {
+      return render2(i.date, i.state, i.positive);
+    })
+    .join("");
+
+
+const res1 = document.querySelector(".container");
+res1.innerHTML = covid;
+}
+getCovid();
+
+*/
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+//altKey
+//shiftKey
+//ctrlKey
+
+/*
+  function shiftAlt(event){
+      if(event.shiftKey && event.altKey){
+          alert('hello')
+      }
+  }
+
+  document.addEventListener('click', shiftAlt)
+
+
+  function shiftAlt2(event){
+    if(event.shiftKey){
+        alert('hello again')
+    }
+}
+
+document.addEventListener('keydown', shiftAlt2)
+
+*/
+
+/*
+///preventDefault
+const link = document.querySelector('.link')
+
+const notDef = (e)=>{
+e.preventDefault()
+}
+
+link.addEventListener('click', notDef)
+
+*/
+
+/*
+const input1 = document.getElementById('1')
+const input2 = document.getElementById('2')
+
+//blur
+//focus
+//change
+//input
+
+/*
+const handleBlur =(e)=>{
+    console.log('blur')
+}
+input1.addEventListener('blur', handleBlur)
+input2.addEventListener('focus', handleBlur)
+*/
+
+/*
+const handleChange =(e)=>{
+    console.log('handleChange',e.target.value)
+}
+input1.addEventListener('handleChange', handleChange)
+
+const handleInput =(e)=>{
+    console.log('handleInput',e.target.value)
+}
+input2.addEventListener('handleinput', handleInput)
+*/
+/*
+
+const input1 = document.getElementById('1')
+const input2 = document.getElementById('2')
+
+const input1Res = (el)=>{
+    if(el.target.value.length >3 ){
+       input1.style.border = '5px solid red'
+ }  else{
+    input1.style.border = '5px solid black'
+ }
+}
+input1.addEventListener('blur', input1Res)
+*/
+
+
+
+const input1 = document.getElementById("1");
+
+const frase = document.createElement("div");
+document.body.append(frase);
+const btn = document.getElementById("btn");
+const input1Res = (e) => {
+  if (e.target.value.length > 3) {
+    input1.classList.add("red");
+
+    frase.textContent = "enter less than 3 symbols";
+    btn.disabled = true;
+    input1.after(`<div>${input1.value}</div>`)
+
+
+  } else {
+    input1.classList.remove("red");
+    frase.textContent = "";
+    btn.disabled = false;
+    
+  }
+};
+input1.addEventListener("input", input1Res);

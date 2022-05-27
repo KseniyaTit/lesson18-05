@@ -32,3 +32,6 @@
     width: 50%;
     margin: 0 auto;
 }
+.red{
+    border: 5px solid red;
+}
